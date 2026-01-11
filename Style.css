@@ -1,0 +1,233 @@
+*{ 
+
+    box-sizing: border-box;
+}
+
+body {background-color: white;
+    margin: 0;}
+
+h1, h2, h3 {
+    font-family: 'Montserrat Bold', sans-serif;
+    font-size: 30px;
+    color: black;
+}
+
+ h4, h5, h6, p{ 
+    font-family: 'Montserrat Bold', sans-serif;
+    font-size: 15px;
+    color: black;
+}
+/* Estilo del nombre PROLOT */
+p.Inicio_p {
+    font-family: 'Montserrat SemiBold', sans-serif;
+    font-size: 23px;
+    margin-left: -10px;
+}
+/* Imagen del logo */
+img.Logo_inicio {
+    width: 150px;
+    height: auto;
+    margin-top: -20px;
+}
+/* Contenedor del logo y el nombre */
+.Imag_encabezado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Contenedor general: todo a la derecha */
+.Botones {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: -60px;
+    font-family: 'Montserrat SemiBold', sans-serif;
+    
+}
+
+/* Contenedor del botón opciones */
+.Botoncaida {
+    position: relative;
+}
+
+/* Botón "Opciones" */
+.opciones {
+    padding: 8px 14px;
+    background-color: #2b2b28;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    list-style: none;
+}
+
+/* Quita la flecha del summary */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Menú desplegable (oculto por defecto) */
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #2b2b28;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+/* Mostrar menú al abrir */
+details[open] .menu {
+    display: block;
+}
+
+/* Enlaces del menú */
+.menu a {
+    display: block;
+    padding: 6px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #2b2b28;
+}
+
+/* Botón Iniciar sesión */
+.Botoninicio {
+    padding: 8px 14px;
+    background-color: #cc7a02;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Botón Registro */
+.Botonregistro {
+    padding: 8px 14px;
+    background-color: #ef2b2d;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+    
+
+h1.Bienvenida {
+    font-family: 'Montserrat Bold', sans-serif;
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Botonregistro:hover{
+    background-color: #830000;
+}
+
+.Botoninicio:hover{
+    background-color: #994c00;
+}
+
+.Botoncaida:hover .opciones {
+    background-color: #1a1a18;
+}
+
+.menu a:hover {
+    background-color: #1a1a18;
+}
+
+.Botonregistro{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Botoninicio{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Botoncaida .opciones{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu a{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h3.Text_1 {
+    font-family: 'Montserrat Regular', sans-serif;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Logo_Bienvenida {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: auto;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    background-color: rgb(230, 230, 230);
+    padding: 20px 0;
+    margin-bottom: 20px;
+
+}
+
+header .Logo_Bienvenida {
+    margin: 0;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+}
+
+#hero {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+
+.menu-mobile {
+  display: none;
+}
+
+.menu-mobile summary {
+  font-size: 24px;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .Botones {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
