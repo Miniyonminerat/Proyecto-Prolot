@@ -1,58 +1,60 @@
-*{ 
-
+/* RESETEO DE MÁRGENES Y PADDING */
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body {background-color: white;
-    margin: 0;}
-
-h1, h2, h3 {
-    font-family: 'Montserrat Bold', sans-serif;
-    font-size: 30px;
-    color: black;
+/* FUENTE */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
 }
 
- h4, h5, h6, p{ 
-    font-family: 'Montserrat Bold', sans-serif;
-    font-size: 15px;
-    color: black;
+/* CONTENEDOR GENERAL */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
-/* Estilo del nombre PROLOT */
-p.Inicio_p {
-    font-family: 'Montserrat SemiBold', sans-serif;
-    font-size: 23px;
-    margin-left: -10px;
+
+/* HEADER */
+header {
+    background-color: #e6e6e6;
 }
-/* Imagen del logo */
-img.Logo_inicio {
-    width: 150px;
-    height: auto;
-    margin-top: -20px;
-}
-/* Contenedor del logo y el nombre */
+
+/* IMAGEN ENCABEZADO */
 .Imag_encabezado {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Contenedor general: todo a la derecha */
+/* LOGO INICIO */
+.Logo_inicio {
+    width: 120px;
+}
+
+/* TEXTO INICIO */
+.Inicio_p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* FLEX HEADER */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* BOTONES HEADER */
 .Botones {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
     gap: 12px;
-    margin-top: -60px;
-    font-family: 'Montserrat SemiBold', sans-serif;
-    
 }
 
-/* Contenedor del botón opciones */
-.Botoncaida {
-    position: relative;
-}
-
-/* Botón "Opciones" */
+/* OPCIONES */
 .opciones {
     padding: 8px 14px;
     background-color: #2b2b28;
@@ -62,28 +64,27 @@ img.Logo_inicio {
     list-style: none;
 }
 
-/* Quita la flecha del summary */
+/* Quitar flecha */
 summary::-webkit-details-marker {
     display: none;
 }
 
-/* Menú desplegable (oculto por defecto) */
+/* MENU DESPLEGABLE */
 .menu {
-    display: none;
     position: absolute;
-    top: 100%;
-    right: 0;
     background-color: #2b2b28;
     border-radius: 6px;
     padding: 6px;
+    margin-top: 6px;
+    display: none;
 }
 
-/* Mostrar menú al abrir */
+/* MOSTRAR MENÚ AL HACER CLICK */
 details[open] .menu {
     display: block;
 }
 
-/* Enlaces del menú */
+/* ENLACES DEL MENÚ */
 .menu a {
     display: block;
     padding: 6px 10px;
@@ -91,11 +92,12 @@ details[open] .menu {
     text-decoration: none;
 }
 
+/* EFECTO HOVER EN ENLACES DEL MENÚ */
 .menu a:hover {
-    background-color: #2b2b28;
+    background-color: #1a1a18;
 }
 
-/* Botón Iniciar sesión */
+/* BOTON INICIAR SESIÓN */
 .Botoninicio {
     padding: 8px 14px;
     background-color: #cc7a02;
@@ -104,120 +106,124 @@ details[open] .menu {
     cursor: pointer;
 }
 
-/* Botón Registro */
+/* BOTÓN REGISTRO */
 .Botonregistro {
     padding: 8px 14px;
     background-color: #ef2b2d;
     color: white;
     border-radius: 6px;
-    cursor: pointer;
 }
 
 
-    
-
-h1.Bienvenida {
-    font-family: 'Montserrat Bold', sans-serif;
-    font-size: 50px;
-    color: black;
-    text-align: center;
-    margin-top: 20px;
+/* SECCIÓN CARACTERÍSTICAS */
+#Caracteristicas {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('Media/Logo 1.png');
+    background-size: 450px;
+    background-position: center;
+    color: white;
 }
 
-.Botonregistro:hover{
-    background-color: #830000;
-}
-
-.Botoninicio:hover{
-    background-color: #994c00;
-}
-
-.Botoncaida:hover .opciones {
-    background-color: #1a1a18;
-}
-
-.menu a:hover {
-    background-color: #1a1a18;
-}
-
-.Botonregistro{
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.Botoninicio{
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.Botoncaida .opciones{
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.menu a{
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-h3.Text_1 {
-    font-family: 'Montserrat Regular', sans-serif;
-    font-size: 30px;
-    color: black;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.Logo_Bienvenida {
-    display: block;
-    margin: 20px auto;
-    width: 200px;
-    height: auto;
-}
-
-.container {
-    max-width: 1000px;
-    margin: auto;
-}
-
-header {
-    background-color: rgb(230, 230, 230);
-    padding: 20px 0;
-    margin-bottom: 20px;
-
-}
-
-header .Logo_Bienvenida {
-    margin: 0;
-    padding: 25px 30px;
+/* CONTENEDOR CARACTERÍSTICAS */
+#Caracteristicas .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-#hero {
-    background-color: #f4f4f4;
-    padding: 40px 0;
+/* TEXTO BIENVENIDA */
+.texto-bienvenida {
     text-align: center;
+    margin-bottom: 50px;
+}
+
+/* TEXTO TÍTULO */
+.texto-bienvenida h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+/* TEXTO SUBTÍTULO */
+.texto-bienvenida h2 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+/* CARTAS */
+.cartas-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 👈 3 columnas */
+    gap: 40px;
+    width: 100%;
+    justify-items: center;
+}
+
+/* ESTILO CARTA */
+.carta {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 35px 25px;
+    border-radius: 20px;
+
+    width: 100%;
+    max-width: 320px;   
+    min-height: 420px;  
+
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* CONTENIDO CARTA */
+.carta h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+/* TEXTO CARTA */
+.carta p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* BOTÓN */
+.Boton_Masinfo {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* EFECTO HOVER BOTÓN */
+.Boton_Masinfo:hover {
+    background-color: #dddddd;
+}
+
+/* FOOTER */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MEDIA QUERIES */
+/* Ajustes para pantallas menores a 900px */
+@media (max-width: 900px) {
+    .cartas-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 
-
-.menu-mobile {
-  display: none;
-}
-
-.menu-mobile summary {
-  font-size: 24px;
-  cursor: pointer;
-  list-style: none;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .Botones {
-    display: none;
-  }
-
-  .menu-mobile {
-    display: block;
-  }
-}
 
 
 
