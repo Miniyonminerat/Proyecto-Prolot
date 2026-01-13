@@ -1,227 +1,289 @@
-/* RESETEO DE MÁRGENES Y PADDING */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* FUENTE */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: white;
-}
-
-/* CONTENEDOR GENERAL */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* HEADER */
-header {
-    background-color: #e6e6e6;
-}
-
-/* IMAGEN ENCABEZADO */
-.Imag_encabezado {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* LOGO INICIO */
-.Logo_inicio {
-    width: 120px;
-}
-
-/* TEXTO INICIO */
-.Inicio_p {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* FLEX HEADER */
-.header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* BOTONES HEADER */
-.Botones {
-    display: flex;
-    gap: 12px;
-}
-
-/* OPCIONES */
-.opciones {
-    padding: 8px 14px;
-    background-color: #2b2b28;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    list-style: none;
-}
-
-/* Quitar flecha */
-summary::-webkit-details-marker {
-    display: none;
-}
-
-/* MENU DESPLEGABLE */
-.menu {
-    position: absolute;
-    background-color: #2b2b28;
-    border-radius: 6px;
-    padding: 6px;
-    margin-top: 6px;
-    display: none;
-}
-
-/* MOSTRAR MENÚ AL HACER CLICK */
-details[open] .menu {
-    display: block;
-}
-
-/* ENLACES DEL MENÚ */
-.menu a {
-    display: block;
-    padding: 6px 10px;
-    color: white;
-    text-decoration: none;
-}
-
-/* EFECTO HOVER EN ENLACES DEL MENÚ */
-.menu a:hover {
-    background-color: #1a1a18;
-}
-
-/* BOTON INICIAR SESIÓN */
-.Botoninicio {
-    padding: 8px 14px;
-    background-color: #cc7a02;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* BOTÓN REGISTRO */
-.Botonregistro {
-    padding: 8px 14px;
-    background-color: #ef2b2d;
-    color: white;
-    border-radius: 6px;
-}
-
-
-/* SECCIÓN CARACTERÍSTICAS */
-#Caracteristicas {
-    min-height: 100vh;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url('Media/Logo 1.png');
-    background-size: 450px;
-    background-position: center;
-    color: white;
-}
-
-/* CONTENEDOR CARACTERÍSTICAS */
-#Caracteristicas .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* TEXTO BIENVENIDA */
-.texto-bienvenida {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-/* TEXTO TÍTULO */
-.texto-bienvenida h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-/* TEXTO SUBTÍTULO */
-.texto-bienvenida h2 {
-    font-size: 22px;
-    font-weight: normal;
-}
-
-/* CARTAS */
-.cartas-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 👈 3 columnas */
-    gap: 40px;
-    width: 100%;
-    justify-items: center;
-}
-
-/* ESTILO CARTA */
-.carta {
-    background: rgba(0, 0, 0, 0.75);
-    padding: 35px 25px;
-    border-radius: 20px;
-
-    width: 100%;
-    max-width: 320px;   
-    min-height: 420px;  
-
-    text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* CONTENIDO CARTA */
-.carta h2 {
-    margin-bottom: 15px;
-    font-size: 26px;
-}
-
-/* TEXTO CARTA */
-.carta p {
-    font-size: 15px;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-/* BOTÓN */
-.Boton_Masinfo {
-    padding: 10px 18px;
-    border: none;
-    border-radius: 6px;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* EFECTO HOVER BOTÓN */
-.Boton_Masinfo:hover {
-    background-color: #dddddd;
-}
-
-/* FOOTER */
-footer {
-    background-color: #111;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* MEDIA QUERIES */
-/* Ajustes para pantallas menores a 900px */
-@media (max-width: 900px) {
-    .cartas-container {
-        grid-template-columns: 1fr;
+    /* =========================
+    RESET GENERAL
+    ========================= */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
+
+    /* =========================
+    BODY
+    ========================= */
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: white;
+    }
+
+    /* =========================
+    CONTENEDOR GLOBAL
+    ========================= */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* =========================
+    HEADER
+    ========================= */
+    header {
+        background-color: #e6e6e6;
+    }
+
+    .header-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Imag_encabezado {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Logo_inicio {
+        width: 120px;
+    }
+
+    .Inicio_p {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    /* =========================
+    BOTONES HEADER
+    ========================= */
+    .Botones {
+        display: flex;
+        gap: 12px;
+    }
+
+    .opciones {
+        padding: 8px 14px;
+        background-color: #2b2b28;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        background-color: #2b2b28;
+        border-radius: 6px;
+        padding: 6px;
+        margin-top: 6px;
+        display: none;
+    }
+
+    details[open] .menu {
+        display: block;
+    }
+
+    .menu a {
+        display: block;
+        padding: 6px 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        background-color: #1a1a18;
+    }
+
+    .Botoninicio {
+        padding: 8px 14px;
+        background-color: #cc7a02;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .Botonregistro {
+        padding: 8px 14px;
+        background-color: #ef2b2d;
+        color: white;
+        border-radius: 6px;
+    }
+
+    /* =========================
+    SECCIÓN 1 - CARACTERÍSTICAS
+    ========================= */
+    #Caracteristicas {
+        min-height: 75vh;
+        background-image:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('Media/Logo 1.png');
+        background-size: 450px;
+        background-position: center;
+        background-repeat: repeat;
+        color: white;
+    }
+
+    #Caracteristicas .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto-bienvenida {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .texto-bienvenida h1 {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+
+    .texto-bienvenida h2 {
+        font-size: 22px;
+        font-weight: normal;
+    }
+
+    /* =========================
+    CARTAS
+    ========================= */
+    .cartas-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        width: 100%;
+        justify-items: center;
+    }
+
+    .carta {
+        background: rgba(0, 0, 0, 0.75);
+        padding: 35px 25px;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 320px;
+        min-height: 420px;
+        text-align: center;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .carta h2 {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .carta p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .Boton_Masinfo {
+        padding: 10px 18px;
+        border-radius: 6px;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .Boton_Masinfo:hover {
+        background-color: #ddd;
+    }
+
+    /* =========================
+    SECCIÓN GALERÍA (FONDO NEGRO)
+    ========================= */
+
+.Seccion-Galeria {
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* GRID PRINCIPAL */
+.galeria-layout {
+    display: grid;
+    grid-template-columns: auto 1fr; /* LOGO | CONTENIDO */
+    gap: 25px;
+    align-items: start; /* 🔥 ALINEA ARRIBA */
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px;
+}
+
+/* LOGO */
+.logo-box {
+    background-color: white;
+    padding: 20px 50px; /* un poco más de padding */
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.6),
+        0 0 60px rgba(255,255,255,0.4);
+
+    display: flex;           /* 🔥 flexbox */
+    align-items: center;     /* centrar horizontalmente */
+    
+}
+
+.logo-box img {
+    height: 120px; /* tamaño del logo */
+    width: auto;
+    display: block;
+    margin: 0px; /* separa el logo del texto */
+}
+
+.logo-box p {
+    font-size: 50px;
+    font-weight: bold;
+    justify-items: center;
+    text-align: center;     
+    margin: 0 200px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* CUADRO BLANCO */
+.Galeria {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow:
+    0 0 25px rgba(255,255,255,0.6),
+    0 0 60px rgba(255,255,255,0.4);
+}
+.Galeria h2 { 
+    text-align: center; 
+    margin-bottom: 30px;
+     font-size: 40px;
+     font-family: 'Montserrat', sans-serif;
+}
+
+/* CONTENIDO */
+.Contenido-Galeria { 
+     display: grid;
+     grid-template-columns: 1fr 1fr; 
+     gap: 10px 10px 400px; 
+     align-items: start; 
+     font-family: 'Montserrat', sans-serif; 
+     font-size: 40px;
+     margin: 10px; 
+}
+
+.Contenido-Galeria a {
+    margin-left: 60px;
+}
+
+
+
+
+
 
 
 
