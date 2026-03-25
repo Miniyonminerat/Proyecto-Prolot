@@ -4,134 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROLOT | Tu moto de tus sueños</title>
-    <link rel="stylesheet" href="/static/Style.css">
+
+    <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-<header>
+<!-- ================= HEADER ================= -->
+<header class="header">
   <div class="container header-flex">
 
-    <div class="Imag_encabezado">
-      <img src="../Media/Logo 1.png" alt="Logo" class="Logo_inicio">
-      <p class="Inicio_p">PROLOT</p>
+    <div class="brand">
+      <img src="../Media/Logo 1.png" alt="Logo Prolot" class="logo">
+      <span class="brand-name">PROLOT</span>
     </div>
 
-    <div class="Botones">
-      <div class="Botoncaida">
-        <details>
-          <summary class="opciones">Opciones</summary>
-          <div class="menu">
-            <a href="Redesociales.html">Redes sociales</a>
-            <a href="Shop.html">Tienda en línea</a>
-          </div>
-        </details>
-      </div>
+    <nav class="nav">
+      <details class="dropdown">
+        <summary class="btn btn-dark">Opciones</summary>
+        <div class="dropdown-menu">
+          <a href="Redesociales.html">Redes sociales</a>
+          <a href="Shop.html">Tienda en línea</a>
+        </div>
+      </details>
 
-      <div class="Botoninicio"> <a href="Iniciarsesion.html">Iniciar sesión</div> </a>
-      <div class="Botonregistro"><a href="Registrese.html">Regístrate</a></div>
-    </div>
+      <a href="Iniciarsesion.html" class="btn btn-primary">Iniciar sesión</a>
+      <a href="Registrese.html" class="btn btn-danger">Regístrate</a>
+    </nav>
 
   </div>
 </header>
 
+<!-- ================= HERO ================= -->
+<section id="caracteristicas" class="hero">
+    <div class="container hero-content">
 
-<section id="Caracteristicas">
-    <div class="container">
-
-        <div class="texto-bienvenida">
+        <div class="hero-text">
             <h1>BIENVENIDO A PROLOT</h1>
-            <h2>El mejor lugar donde tendrás tu moto deportiva Buen Rendimiento, Beautiful y Equilibrada</h2>
+            <h2>El mejor lugar para encontrar tu moto deportiva: rendimiento, estilo y equilibrio</h2>
         </div>
 
-        <div class="cartas-container">
+        <div class="cards">
 
-            <div class="carta">
-                <h2>ELEGANCIA</h2>
+            <div class="card">
+                <h3>ELEGANCIA</h3>
                 <p>
-                    En Prolot, la elegancia no es solo estética, es intención. Cada línea y cada
-                    detalle están pensados para transmitir carácter, equilibrio y presencia.
+                    Cada detalle está diseñado para transmitir carácter, equilibrio y presencia.
                 </p>
-                <button class="Boton_Masinfo">MÁS INFORMACIÓN</button>
+                <button class="btn btn-light">Más información</button>
             </div>
 
-            <div class="carta">
-                <h2>RACING ACCESIBLE</h2>
+            <div class="card">
+                <h3>RACING ACCESIBLE</h3>
                 <p>
-                    Nuestras motos nacen con espíritu racing, pero están pensadas para todos.
-                    Prolot combina sensaciones deportivas con tecnología funcional.
+                    Sensaciones deportivas combinadas con tecnología funcional para todos.
                 </p>
-                <button class="Boton_Masinfo">MÁS INFORMACIÓN</button>
+                <button class="btn btn-light">Más información</button>
             </div>
 
-            <div class="carta">
-                <h2>ALTO RENDIMIENTO</h2>
+            <div class="card">
+                <h3>ALTO RENDIMIENTO</h3>
                 <p>
-                    Motores eficientes, chasis optimizados y componentes equilibrados ofrecen
-                    una conducción potente, estable y precisa.
+                    Motores eficientes y diseño optimizado para una conducción precisa.
                 </p>
-                <button class="Boton_Masinfo">MÁS INFORMACIÓN</button>
+                <button class="btn btn-light">Más información</button>
             </div>
 
         </div>
-
     </div>
 </section>
 
-<section class="Seccion-Galeria">
-    
-    <div class="galeria-layout">
-         <div class="Imagenes-Galeria-Anti">
-            <div class="logo-box">
-                <img src="../Media/Logo 3.png" alt="Logo Fiera">
-                <p>PROLOT</p>
+<!-- ================= GALERÍA ================= -->
+<section class="gallery-section">
+    <div class="gallery-layout">
 
-            </div>
-            
-            <div class="container">
-                
-                <div class="Galeria">
-                    
-                    <h2>Demostracion De Proyecto e Colores</h2>
-                    
-                    <div class="Contenido-Galeria">
-                        
-                        <p>En Prolot vas a tener variedades de estilos como diferentes Motos y distintos Colores. Algunos de nuestros proyectos son los siguientes: </p>
-                        
-                        <div class="Imagenes-Galeria">
-                            <img src="../Media/Chocolate.png" alt="">
-                            <img src="../Media/Fiera.png" alt="">
-                            <img src="../Media/Mistico.png" alt="">
-                            <a href="../Media/Prototipo 1.png" target="_blank"><img src="../Media/Prototipo 1.png" alt=""></a>
-                        </div>
-                        
-                        <p>Como ves, este proyecto llevara su tiempo pero con su apoyo se lograra </p>
-                    </div>  
+        <div class="logo-box">
+            <img src="../Media/Logo 3.png" alt="Logo">
+            <p>PROLOT</p>
+        </div>
+
+        <div class="gallery-card">
+            <h2>Demostración de Proyecto y Colores</h2>
+
+            <div class="gallery-content">
+                <p>
+                    En Prolot encontrarás variedad de estilos, motos y colores.
+                </p>
+
+                <div class="gallery-images">
+                    <img src="../Media/Chocolate.png">
+                    <img src="../Media/Fiera.png">
+                    <img src="../Media/Mistico.png">
+                    <img src="../Media/Prototipo 1.png">
                 </div>
+
+                <p>
+                    Este proyecto está en desarrollo y seguirá creciendo con el tiempo.
+                </p>
             </div>
         </div>
-  </div>    
-</section>
 
-<section>
-
-    <div class="container_contacto">
-        <div class="Contacto">
-            <h2>Contáctanos</h2>
-            <p>¿Tienes preguntas o necesitas más información? Estamos aquí para ayudarte. Contáctanos a través de los siguientes medios:</p>
-
-            <br>
-
-            <a href="https://wa.me/573177273508" class="btn-whatsapp" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
-        
-            
-                
-</section>
-
-<footer>
-    <div class="container">
-        <p>© 2026 Prolot. Todos los derechos reservados.</p>
     </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section class="contact-section">
+    <div class="contact-card">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes preguntas? Estamos aquí para ayudarte.</p>
+
+        <a href="https://wa.me/573177273508" class="btn-whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 Prolot. Todos los derechos reservados.</p>
 </footer>
 
 </body>
