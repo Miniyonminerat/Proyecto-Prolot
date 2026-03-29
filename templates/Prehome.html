@@ -17,7 +17,7 @@
 
     <div class="brand">
       <img src="../Media/Logo 1.png" alt="Logo Prolot" class="logo">
-      <span class="brand-name">PROLOT</span>
+      <a class="brand-name" href="/templates/Prehome.html">PROLOT</a>
     </div>
 
     <nav class="nav">
@@ -48,7 +48,7 @@
         <div class="cards">
 
             <div class="card">
-                <h3>ELEGANCIA</h3>
+                <h3 class="Titulo-card">ELEGANCIA</h3>
                 <p>
                     Cada detalle está diseñado para transmitir carácter, equilibrio y presencia.
                 </p>
@@ -56,7 +56,7 @@
             </div>
 
             <div class="card">
-                <h3>RACING ACCESIBLE</h3>
+                <h3 class="Titulo-card">RACING ACCESIBLE</h3>
                 <p>
                     Sensaciones deportivas combinadas con tecnología funcional para todos.
                 </p>
@@ -64,7 +64,7 @@
             </div>
 
             <div class="card">
-                <h3>ALTO RENDIMIENTO</h3>
+                <h3 class="Titulo-card">ALTO RENDIMIENTO</h3>
                 <p>
                     Motores eficientes y diseño optimizado para una conducción precisa.
                 </p>
@@ -92,11 +92,19 @@
                     En Prolot encontrarás variedad de estilos, motos y colores.
                 </p>
 
-                <div class="gallery-images">
-                    <img src="../Media/Chocolate.png">
-                    <img src="../Media/Fiera.png">
-                    <img src="../Media/Mistico.png">
-                    <img src="../Media/Prototipo 1.png">
+                <div class="gallery-carousel">
+                    <!-- Contenedor que se mueve mágicamente -->
+                    <div class="gallery-track">
+                        <img src="../Media/Chocolate.png">
+                        <img src="../Media/Fiera.png">
+                        <img src="../Media/Mistico.png">
+                        <img src="../Media/Prototipo 1.png">
+                        <!-- Duplicamos las fotos para que el efecto visual nunca quede vacío al inicio -->
+                        <img src="../Media/Chocolate.png">
+                        <img src="../Media/Fiera.png">
+                        <img src="../Media/Mistico.png">
+                        <img src="../Media/Prototipo 1.png">
+                    </div>
                 </div>
 
                 <p>
@@ -116,6 +124,12 @@
 
         <a href="https://wa.me/573177273508" class="btn-whatsapp" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://github.com/Miniyonminerat" class="btn-github" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-diego-monsalve-martinez-3669613b7/" class="btn-linkedin" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
         </a>
     </div>
 </section>
