@@ -44,6 +44,11 @@ body {
     gap: 10px;
 }
 
+.brand:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 .logo {
     width: 100px;
 }
@@ -51,6 +56,8 @@ body {
 .brand-name {
     font-size: 24px;
     font-weight: bold;
+    text-decoration: none;
+    color: var(--color-dark);
 }
 
 /* ================= NAV ================= */
@@ -59,6 +66,51 @@ body {
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
+}
+
+/* ================= DROPDOWN (Opciones) ================= */
+.dropdown {
+    position: relative; /* Para que el submenú se posicione en base a este contenedor */
+}
+
+/* Ocultar la flechita nativa del elemento <details> */
+.dropdown summary {
+    list-style: none;
+    user-select: none;
+}
+.dropdown summary::-webkit-details-marker {
+    display: none; 
+}
+
+/* El menú que se despliega */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Justo debajo del botón */
+    left: 0;
+    margin-top: 5px;
+    background-color: var(--color-dark);
+    border-radius: var(--radius);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+    z-index: 100; /* Para que no quede oculto detrás del video o fotos */
+    overflow: hidden;
+}
+
+/* Los enlaces dentro del menú desplegable */
+.dropdown-menu a {
+    color: var(--color-white);
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #4b4b48; /* Color sutil al pasar el ratón */
+    color: var(--color-primary);
 }
 
 /* ================= BOTONES ================= */
@@ -70,10 +122,15 @@ body {
     cursor: pointer;
 }
 
+.btn:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 .btn-dark { background: var(--color-dark); }
 .btn-primary { background: var(--color-primary); }
 .btn-danger { background: var(--color-danger); }
-.btn-light { background: white; color: black; }
+.btn-light { background: white; color: black; margin-top: 20px;}
 
 /* ================= HERO ================= */
 .hero {
@@ -81,11 +138,26 @@ body {
     background:
         linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         url('../Media/Logo 1.png');
-    background-size: 400px;
+    background-size: 100% 100%, 400px;
+    background-repeat: no-repeat, repeat;
     color: white;
     display: flex;
     align-items: center;
+    /* Aplicando la animación */
+    animation: moverFondo 15s linear infinite;
 }
+
+/* Creando el bucle infinito */
+@keyframes moverFondo {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+    100% {
+        background-position: 0 0, -400px -400px; /* Se moverá en diagonal, ajusta a "-400px 0" si solo lo quieres horizontal */
+    }
+}
+
+
 
 .hero-text h1 { font-size: 48px; }
 .hero-text h2 { font-size: 20px; }
@@ -105,10 +177,21 @@ body {
     text-align: center;
 }
 
+.Titulo-card {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 /* ================= GALERÍA MEJORADA ================= */
 .gallery-section {
     background: black;
-    padding: 100px 20px; /* MÁS GRANDE */
+    padding: 100px 20px; 
 }
 
 .gallery-layout {
@@ -124,6 +207,11 @@ body {
     padding: 30px;
     border-radius: var(--radius);
     text-align: center;
+}
+
+.logo-box:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 .logo-box img {
@@ -148,25 +236,46 @@ body {
     margin-bottom: 20px;
 }
 
-/* IMÁGENES ORGANIZADAS */
-.gallery-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    gap: 15px;
-    margin: 20px 0;
+/* ================= CARRUSEL DE GALERÍA ================= */
+.gallery-carousel {
+    overflow: hidden; /* Esconde las imágenes que se salen del margen */
+    width: 100%;
+    margin: 30px 0;
 }
 
-.gallery-images img {
-    width: 100%;
-    height: 150px;
+.gallery-track {
+    display: flex;
+    gap: 20px; /* Separación horizontal entre fotos */
+    width: max-content; /* Permite que el contenedor se expanda al ancho de todas sus fotos juntas */
+    /* La propia animación ("scrollGallery") controlará el bucle infinito */
+    animation: scrollGallery 20s linear infinite; 
+}
+
+
+.gallery-track img {
+    width: 300px; /* Las hace lo suficientemente grandes */
+    height: 250px; /* Protege un buen ratio, sin empujar violentamente tu texto */
     object-fit: contain; 
     background: #fff; 
     border-radius: 10px;
+    flex-shrink: 0; /* Evita que las imágenes se apachurren en el contenedor flex */
     transition: transform 0.3s ease;
 }
 
-.gallery-images img:hover {
+.gallery-track img:hover {
     transform: scale(1.05);
+}
+
+/* Definiendo el movimiento */
+@keyframes scrollGallery {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Desplaza la distancia exacta de las 4 fotos iniciales (300px de ancho mas 20px de gap) 
+           hacia la izquierda para lograr un "loop" indetectable.*/
+        transform: translateX(calc(-300px * 4 - 20px * 4));
+    }
 }
 
 /* ================= CONTACT ================= */
@@ -194,11 +303,47 @@ body {
     color: white;
 }
 
+.contact-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 .btn-whatsapp {
     display: inline-block;
     margin-top: 20px;
     font-size: 30px;
     color: white;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.btn-github {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-left: 20px;
+    color: white;
+}
+
+.btn-github:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.btn-linkedin {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-left: 20px;
+    color: white;
+}
+
+.btn-linkedin:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 /* ================= FOOTER ================= */
@@ -223,9 +368,7 @@ body {
         text-align: center;
     }
 
-    .gallery-images {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    /* Se han removido las columnas de "gallery-images" acá porque es un flexbox ahora */
 }
 
 /* MÓVIL */
@@ -239,9 +382,7 @@ body {
         font-size: 16px;
     }
 
-    .gallery-images {
-        grid-template-columns: 1fr; /* UNA COLUMNA */
-    }
+    /* Se han removido las columnas acá para no colisionar con nuestro carrusel de flexbox */
 
     .nav {
         justify-content: center;
@@ -256,3 +397,4 @@ body {
         width: 80px;
     }
 }
+
