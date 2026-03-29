@@ -1,0 +1,263 @@
+/* ================= HEADER ================= */
+.header {
+    background: #e6e6e6;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    width: 100px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ================= NAV ================= */
+.nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ================= DROPDOWN (Opciones) ================= */
+.dropdown {
+    position: relative; /* Para que el submenú se posicione en base a este contenedor */
+}
+
+/* Ocultar la flechita nativa del elemento <details> */
+.dropdown summary {
+    list-style: none;
+    user-select: none;
+}
+.dropdown summary::-webkit-details-marker {
+    display: none; 
+}
+
+/* El menú que se despliega */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Justo debajo del botón */
+    left: 0;
+    margin-top: 5px;
+    background-color: var(--color-dark);
+    border-radius: var(--radius);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+    z-index: 100; /* Para que no quede oculto detrás del video o fotos */
+    overflow: hidden;
+}
+
+/* Los enlaces dentro del menú desplegable */
+.dropdown-menu a {
+    color: var(--color-white);
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #4b4b48; /* Color sutil al pasar el ratón */
+    color: var(--color-primary);
+}
+
+/* ================= BOTONES ================= */
+.btn {
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.btn-dark { background: var(--color-dark); }
+.btn-primary { background: var(--color-primary); }
+.btn-danger { background: var(--color-danger); }
+.btn-light { background: white; color: black; margin-top: 20px;}
+
+/* ================= VARIABLES (Reasegurando los colores en este archivo) ================= */
+:root {
+    --color-primary: #cc7a02;
+    --color-danger: #ef2b2d;
+    --color-dark: #2b2b28;
+    --color-bg: #f5f5f5;
+    --color-white: #ffffff;
+    --radius: 12px;
+}
+
+/* ================= DISEÑO DEL FORMULARIO (Glassmorphism / Modo Oscuro) ================= */
+.form-section {
+    min-height: calc(100vh - 80px); /* Ocupa toda la pantalla restante bajo el header */
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+        url('../Media/Logo\ 3.png'); /* Puedes cambiarla a cualquier fondo que muestre motos */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.form-container {
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(16px); /* Efecto transparente de vidrio esmerilado */
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    color: white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: white; 
+}
+
+.form-container p {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.prolot-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 15px 16px 45px; /* Espacio a la izquierda de 45px para el icono */
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+/* Efecto al seleccionar el input (resplandor naranja) */
+.input-group input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 12px rgba(204, 122, 2, 0.4); 
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Posición del icono */
+.input-group .icon {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* El icono cambia a color naranja si el input está seleccionado o si hay texto */
+.input-group input:focus ~ .icon, 
+.input-group input:not(:placeholder-shown) ~ .icon {
+    color: var(--color-primary);
+}
+
+/* Opciones de recordar / olvidar contraseña */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #ccc;
+    margin-top: -5px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: none;
+    margin-top: 15px;
+    border-radius: var(--radius);
+}
+
+.form-footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.form-footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+    color: #e58d04; 
+    text-decoration: underline;
+}
