@@ -39,13 +39,14 @@ El objetivo de Prolot es servir como un proyecto de práctica avanzada para:
 ---
 
 ## 📂 Estructura
-
+```
 Proyecto-Prolot/
 │
-├── index.html
-├── css/
-├── js/
-
+├── Media/
+├── static/
+├── JS/
+├── templates/
+```
 ---
 
 ## 🚀 Futuro del proyecto
