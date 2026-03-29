@@ -43,18 +43,21 @@ El objetivo de Prolot es servir como un proyecto de práctica avanzada para:
 Proyecto-Prolot/
 │
 ├── Media/
-    ├── Chocolate.png
-    ├── Fiera.png
-    ├── Logo 1.png
-    ├── Logo 2.png
-    ├── Logo 3.png
-    ├── Mistico.png
-    ├── Motos fondo prolot.png
-    |__ Prototipo 1.png
+|    ├── Chocolate.png
+|    ├── Fiera.png
+|    ├── Logo 1.png
+|    ├── Logo 2.png
+|    ├── Logo 3.png
+|    ├── Mistico.png
+|    ├── Motos fondo prolot.png
+|    |__ Prototipo 1.png
+|
 ├── static/
-    |__ Style.css
+|    |__ Style.css
+|
 ├── JS/
-    !__ Script.js
+|    !__ Script.js
+|
 ├── templates/
     ├── iniciarsesion.html
     ├── Prehome.html
