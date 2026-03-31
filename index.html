@@ -1,143 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROLOT | Tu moto de tus sueños</title>
-
-    <link rel="stylesheet" href="../static/Style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROLOT | Tu moto de tus sueños</title>
+  <link rel="stylesheet" href="static/Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-  <div class="container header-flex">
-
-    <div class="brand">
-      <img src="../Media/Logo 1.png" alt="Logo Prolot" class="logo">
-      <a class="brand-name" href="index.html">PROLOT</a>
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header-flex">
+      <div class="brand">
+        <img src="Media/Logo 1.png" alt="Logo Prolot" class="logo">
+        <a class="brand-name" href="index.html">PROLOT</a>
+      </div>
+      <nav class="nav">
+        <details class="dropdown">
+          <summary class="btn btn-dark">Opciones</summary>
+          <div class="dropdown-menu">
+            <a href="Redesociales.html">Redes sociales</a>
+            <a href="Shop.html">Tienda en línea</a>
+          </div>
+        </details>
+        <a href="Iniciarsesion.html" class="btn btn-primary">Iniciar sesión</a>
+        <a href="Registrese.html" class="btn btn-danger">Regístrate</a>
+      </nav>
     </div>
+  </header>
 
-    <nav class="nav">
-      <details class="dropdown">
-        <summary class="btn btn-dark">Opciones</summary>
-        <div class="dropdown-menu">
-          <a href="../templates/Redesociales.html">Redes sociales</a>
-          <a href="../templates/Shop.html">Tienda en línea</a>
-        </div>
-      </details>
-
-      <a href="../templates/Iniciarsesion.html" class="btn btn-primary">Iniciar sesión</a>
-      <a href="../templates/Registrese.html" class="btn btn-danger">Regístrate</a>
-    </nav>
-
-  </div>
-</header>
-
-<!-- ================= HERO ================= -->
-<section id="caracteristicas" class="hero">
+  <!-- ================= HERO ================= -->
+  <section id="caracteristicas" class="hero">
     <div class="container hero-content">
-
-        <div class="hero-text">
-            <h1>BIENVENIDO A PROLOT</h1>
-            <h2>El mejor lugar para encontrar tu moto deportiva: rendimiento, estilo y equilibrio</h2>
+      <div class="hero-text">
+        <h1>BIENVENIDO A PROLOT</h1>
+        <h2>El mejor lugar para encontrar tu moto deportiva: rendimiento, estilo y equilibrio</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3 class="Titulo-card">ELEGANCIA</h3>
+          <p>Cada detalle está diseñado para transmitir carácter, equilibrio y presencia.</p>
+          <button class="btn btn-light">Más información</button>
         </div>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3 class="Titulo-card">ELEGANCIA</h3>
-                <p>
-                    Cada detalle está diseñado para transmitir carácter, equilibrio y presencia.
-                </p>
-                <button class="btn btn-light">Más información</button>
-            </div>
-
-            <div class="card">
-                <h3 class="Titulo-card">RACING ACCESIBLE</h3>
-                <p>
-                    Sensaciones deportivas combinadas con tecnología funcional para todos.
-                </p>
-                <button class="btn btn-light">Más información</button>
-            </div>
-
-            <div class="card">
-                <h3 class="Titulo-card">ALTO RENDIMIENTO</h3>
-                <p>
-                    Motores eficientes y diseño optimizado para una conducción precisa.
-                </p>
-                <button class="btn btn-light">Más información</button>
-            </div>
-
+        <div class="card">
+          <h3 class="Titulo-card">RACING ACCESIBLE</h3>
+          <p>Sensaciones deportivas combinadas con tecnología funcional para todos.</p>
+          <button class="btn btn-light">Más información</button>
         </div>
+        <div class="card">
+          <h3 class="Titulo-card">ALTO RENDIMIENTO</h3>
+          <p>Motores eficientes y diseño optimizado para una conducción precisa.</p>
+          <button class="btn btn-light">Más información</button>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ================= GALERÍA ================= -->
-<section class="gallery-section">
+  <!-- ================= GALERÍA ================= -->
+  <section class="gallery-section">
     <div class="gallery-layout">
-
-        <div class="logo-box">
-            <img src="../Media/Logo 3.png" alt="Logo">
-            <p>PROLOT</p>
-        </div>
-
-        <div class="gallery-card">
-            <h2>Demostración de Proyecto y Colores</h2>
-
-            <div class="gallery-content">
-                <p>
-                    En Prolot encontrarás variedad de estilos, motos y colores.
-                </p>
-
-                <div class="gallery-carousel">
-                    <!-- Contenedor que se mueve mágicamente -->
-                    <div class="gallery-track">
-                        <img src="../Media/Chocolate.png">
-                        <img src="../Media/Fiera.png">
-                        <img src="../Media/Mistico.png">
-                        <img src="../Media/Prototipo 1.png">
-                        <!-- Duplicamos las fotos para que el efecto visual nunca quede vacío al inicio -->
-                        <img src="../Media/Chocolate.png">
-                        <img src="../Media/Fiera.png">
-                        <img src="../Media/Mistico.png">
-                        <img src="../Media/Prototipo 1.png">
-                    </div>
-                </div>
-
-                <p>
-                    Este proyecto está en desarrollo y seguirá creciendo con el tiempo.
-                </p>
+      <div class="logo-box">
+        <img src="Media/Logo 3.png" alt="Logo">
+        <p>PROLOT</p>
+      </div>
+      <div class="gallery-card">
+        <h2>Demostración de Proyecto y Colores</h2>
+        <div class="gallery-content">
+          <p>En Prolot encontrarás variedad de estilos, motos y colores.</p>
+          <div class="gallery-carousel">
+            <div class="gallery-track">
+              <img src="Media/Chocolate.png">
+              <img src="Media/Fiera.png">
+              <img src="Media/Mistico.png">
+              <img src="Media/Prototipo 1.png">
+              <!-- Duplicados para el efecto visual continuo -->
+              <img src="Media/Chocolate.png">
+              <img src="Media/Fiera.png">
+              <img src="Media/Mistico.png">
+              <img src="Media/Prototipo 1.png">
             </div>
+          </div>
+          <p>Este proyecto está en desarrollo y seguirá creciendo con el tiempo.</p>
         </div>
-
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ================= CONTACTO ================= -->
-<section class="contact-section">
+  <!-- ================= CONTACTO ================= -->
+  <section class="contact-section">
     <div class="contact-card">
-        <h2>Contáctanos</h2>
-        <p>¿Tienes preguntas? Estamos aquí para ayudarte.</p>
-
-        <a href="https://wa.me/573177273508" class="btn-whatsapp" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://github.com/Miniyonminerat" class="btn-github" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/juan-diego-monsalve-martinez-3669613b7/" class="btn-linkedin" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
+      <h2>Contáctanos</h2>
+      <p>¿Tienes preguntas? Estamos aquí para ayudarte.</p>
+      <a href="https://wa.me/573177273508" class="btn-whatsapp" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="https://github.com/Miniyonminerat" class="btn-github" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/juan-diego-monsalve-martinez-3669613b7/" class="btn-linkedin" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
     </div>
-</section>
+  </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
     <p>© 2026 Prolot. Todos los derechos reservados.</p>
-</footer>
+  </footer>
 
 </body>
 </html>
